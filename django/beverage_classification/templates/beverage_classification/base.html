@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 타이틀 및 icon -->
+  <title>CAN you tell me?</title>
+  <link rel="shortcut icon" href="{% static 'beverage_classification/assets/images/favicon.ico' %}">
+  <!-- font -->
+  <link href="//fonts.googleapis.com/css?family=Do+Hyeon|Noto+Sans&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' type='text/css' href="{% static 'beverage_classification/style.css' %}" />
+</head>
+
+<body>
+  <!-- 상단 고정 -->
+  <header id="header">
+    <a href="{% url 'beverage_classification:index' %}">
+      <img class="logo_img" src="{% static 'beverage_classification/assets/images/soda-1.png' %}">
+      <p><b class="can">CAN</b> you tell me?</p></a>
+  </header>
+  <div id="container">
+    <!-- 본문 내용 -->
+    <div class="wrap">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+  <!-- 하단 고정 -->
+  <footer class="footer">
+    <div class="f_content">
+      <div>
+        <img src="{% static 'beverage_classification/assets/images/soda-1.png' %}">
+      </div>
+      <div>
+        <p>멋쟁이사자처럼 AI 2기 Final project : 김채란 | 김보영 | 김성연 | 김현진 | 박준수</p>
+        <p>&copy; Copyright 2021 | CAN you tell me? | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
