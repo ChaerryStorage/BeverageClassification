@@ -18,16 +18,21 @@ Can you tell me? 는 시각장애인을 위한 캔 음료 분류 서비스입니
 이런 불편함을 해소하고자 이미지를 통해 캔음료를 분류하는 서비스를 기획했습니다.
 
 ### 진행 과정
-1. 데이터 구축 및 준비
-   1) 11개의 캔음료를 선정하고, 캔음료를 직접 촬영하여 데이터를 구축
-   2) 데이터 준비 : ImageDataGenerator 증강기법을 사용하여 데이터 수 보완
-2. 모델링
-   1) CNN, 전이학습(ResNet152v2, VGG16), teachable machine 모델 성능 비교 후 가장 좋은 성능의 모델을 선정
-3. TTS
-   1) google Text-to-Speech 사용 : Predict의 결과인 음료의 이름(텍스트)을 음성으로 읽어주는 기능
-4. Text Detection
-   1) Google Colud Vision(OCR기능) : 이미지에서 텍스트를 감지하는 기능
-5. django로 해당 서비스를 제공하는 사이트를 제작
+**1. 데이터 구축 및 준비**
+- 11개의 캔음료를 선정하고, 캔음료를 직접 촬영하여 데이터를 구축
+- ImageDataGenerator 증강기법을 사용하여 데이터 수 보완
+
+**2. 모델링**
+- CNN, 전이학습(ResNet152v2, VGG16), teachable machine 모델 성능 비교 후 가장 좋은 성능의 모델을 선정
+  
+**3. TTS**
+- google Text-to-Speech : Predict의 결과인 음료의 이름(텍스트)을 음성으로 읽어주는 기능
+  
+**4. Text Detection**
+- Google Colud Vision(OCR기능) : 이미지에서 텍스트를 감지하는 기능
+
+**5. 웹 구현**
+- django로 해당 서비스를 제공하는 사이트를 제작
 
 ###  아쉬운 점 & 후속과제
 1. 시각장애인 대상의 서비스이기 때문에 웹 서비스가 아닌, 앱 서비스로의 구현 필요
